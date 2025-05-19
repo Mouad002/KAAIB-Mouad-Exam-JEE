@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class CreditImmobilier extends Credit {
+public class CreditImmobilier extends Credit {
     @Enumerated(EnumType.STRING)
     private TypeBien typeBien;
 

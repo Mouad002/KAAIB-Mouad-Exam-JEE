@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class CreditProfessionnel extends Credit {
+public class CreditProfessionnel extends Credit {
     private String motif;
     private String raisonSociale;
 

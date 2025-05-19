@@ -1,8 +1,6 @@
 package com.example.examenspring.entities;
 
-enum TypeBien {
-    Appartement,
-    Maison,
-    Local_Commercial
+public enum TypeBien {
+    APPARTEMENT, MAISON, LOCAL_COMMERCIAL
 }
 

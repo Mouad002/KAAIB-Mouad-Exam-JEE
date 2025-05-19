@@ -1,7 +1,5 @@
 package com.example.examenspring.entities;
 
-enum Statut {
-    En_cours,
-    Accepte,
-    Rejete
+public enum Statut {
+    EN_COURS, ACCEPTE, REJETE
 }

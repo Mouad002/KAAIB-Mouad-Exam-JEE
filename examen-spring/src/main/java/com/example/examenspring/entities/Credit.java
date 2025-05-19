@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -16,19 +17,19 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-class Credit {
+public class Credit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date dateDemande;
+    private LocalDate dateDemande;
     @Enumerated(EnumType.STRING)
     private Statut statut;
-    private Date dateIcceptation;
+    private LocalDate dateAcceptation;
     private double montant;
     private int dureeRemboursement;
     private double tauxInteret;
     @ManyToOne()
     private Client client;
-    @OneToMany(mappedBy = "credit")
+    @OneToMany(mappedBy = "credit", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Remboursement> remboursements;
 }
