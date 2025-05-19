@@ -1,7 +1,18 @@
 package com.example.examenspring.entities;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@DiscriminatorValue("pro")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 class CreditProfessionnel extends Credit {
     private String motif;
-    private String raison_sociale;
+    private String raisonSociale;
 
 }
