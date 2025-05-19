@@ -2,5 +2,13 @@ package com.example.examenspring.repositories;
 
 import com.example.examenspring.entities.Credit;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface CreditRepository extends JpaRepository<Credit, Long> {}
+import java.util.Collection;
+import java.util.List;
+
+@Repository
+public interface CreditRepository extends JpaRepository<Credit, Long> {
+
+    List<Credit> findByClientId(Long clientId);
+}

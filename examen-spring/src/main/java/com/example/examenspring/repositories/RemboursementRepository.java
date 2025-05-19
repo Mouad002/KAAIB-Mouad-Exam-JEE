@@ -2,6 +2,14 @@ package com.example.examenspring.repositories;
 
 import com.example.examenspring.entities.Remboursement;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface RemboursementRepository extends JpaRepository<Remboursement, Long> {}
+import java.util.Collection;
+import java.util.List;
+
+@Repository
+public interface RemboursementRepository extends JpaRepository<Remboursement, Long> {
+
+    List<Remboursement> findByCreditId(Long creditId);
+}
 
